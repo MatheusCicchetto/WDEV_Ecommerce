@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Produto } from '../produto';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,8 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  produto;
 
+  constructor(){
+    this.produto = [
+      new Produto('Caneta', 10.00),
+      new Produto('Caderno', 15.00),
+      new Produto('Caneca', 5.00)
+    ];
+  }
+
+  
   ngOnInit() {
   }
 
